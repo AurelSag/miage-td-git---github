@@ -8,6 +8,24 @@ table td {
     border: 1px solid #ccc; /* contour léger pour chaque cellule */
 }
 
+h1 {
+    text-align: center;
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 30px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    /* Effet esthétique */
+    background: linear-gradient(90deg, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+    padding-bottom: 10px;
+
 /* Style pour les listes à l'intérieur des cellules */
 table td ul {
     margin: 0;
