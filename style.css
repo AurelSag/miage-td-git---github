@@ -90,6 +90,47 @@ table td a:hover {
     text-decoration: underline;
 }
 
+/* style.css */
+
+/* Light mode styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ecf0f1;
+    color: #2c3e50;
+    transition: background 0.3s, color 0.3s;
+}
+
+button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #3498db;
+    color: white;
+    transition: background 0.3s, color 0.3s;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: #2c3e50;
+    color: #2c3e50;
+}
+
+button.dark-mode {
+    background: #95a5a6;
+    color: #2c3e50;
+}
+
 /* Style responsive pour mobile */
 @media (max-width: 768px) {
     table, thead, tbody, th, td, tr {
