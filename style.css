@@ -39,40 +39,41 @@ body {
     color: #222;
 }
 
-h1, h2, h3 {
+h1 {
+    text-align: center;
+    font-size: 2.8em;
+    font-weight: bold;
     color: #2c3e50;
-    margin-bottom: 0.5em;
+    margin: 30px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    /* Effet esthétique */
+    background: linear-gradient(90deg, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+    padding-bottom: 10px;
+
+/* Style pour les listes à l'intérieur des cellules */
+table td ul {
+    margin: 0;
+    padding-left: 20px; /* indentation des listes */
 }
 
-a {
-    color: #3498db;
+table td ul li {
+    margin-bottom: 5px; /* espace entre les items */
+    list-style-type: square; /* puces en carré */
+}
+
+/* Style des liens dans les cellules */
+table td a {
+    color: #1a73e8;
     text-decoration: none;
 }
 
-a:hover {
+table td a:hover {
     text-decoration: underline;
-}
-
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-button {
-    background: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background 0.2s;
-}
-
-button:hover {
-    background: #2980b9;
 }
