@@ -1,11 +1,42 @@
-/* Style général des cellules */
-table td {
+/* style.css */
+
+/* Style général pour le tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Style pour les en-têtes */
+thead th {
+    background-color: #4CAF50;
+    color: white;
     padding: 10px;
-    background-color: #f0f8ff; /* couleur de fond légère */
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    vertical-align: top;
-    border: 1px solid #ccc; /* contour léger pour chaque cellule */
+}
+
+/* Style pour les cellules */
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Couleur de fond alternée pour les lignes */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Couleur de fond au survol */
+tbody tr:hover {
+    background-color: #ddd;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
 }
 
 h1 {
