@@ -1,79 +1,122 @@
 /* style.css */
 
-/* Style général pour le tableau */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 16px;
-    text-align: left;
-}
-
-/* Style pour les en-têtes */
-thead th {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-}
-
-/* Style pour les cellules */
-td, th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-/* Couleur de fond alternée pour les lignes */
-tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-/* Couleur de fond au survol */
-tbody tr:hover {
-    background-color: #ddd;
-
+/* Style général du body */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
-    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ecf0f1;
+    color: #2c3e50;
 }
 
+/* Style du titre */
 h1 {
     text-align: center;
-    font-size: 2.8em;
+    font-size: 2.5em;
     font-weight: bold;
-    color: #2c3e50;
-    margin: 30px 0;
+    margin: 40px 0 20px 0;
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    /* Effet esthétique */
     background: linear-gradient(90deg, #3498db, #9b59b6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    border-bottom: 3px solid #3498db;
+    border-bottom: 4px solid #3498db;
     display: inline-block;
     padding-bottom: 10px;
+}
 
-/* Style pour les listes à l'intérieur des cellules */
+/* Style général du tableau */
+table {
+    width: 90%;
+    margin: 0 auto 50px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+/* Style des en-têtes */
+thead th {
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    color: #fff;
+    padding: 15px;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+/* Style des cellules */
+td, th {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 15px;
+}
+
+/* Couleur alternée pour les lignes */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Effet au survol des lignes */
+tbody tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.01);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Style pour les listes dans les cellules */
 table td ul {
     margin: 0;
-    padding-left: 20px; /* indentation des listes */
+    padding-left: 20px;
 }
 
 table td ul li {
-    margin-bottom: 5px; /* espace entre les items */
-    list-style-type: square; /* puces en carré */
+    margin-bottom: 6px;
+    list-style-type: square;
+    color: #34495e;
 }
 
-/* Style des liens dans les cellules */
+/* Style des liens */
 table td a {
-    color: #1a73e8;
+    color: #2980b9;
     text-decoration: none;
+    transition: color 0.2s ease-in-out;
 }
 
 table td a:hover {
+    color: #8e44ad;
     text-decoration: underline;
+}
+
+/* Style responsive pour mobile */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    td {
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #34495e;
+    }
 }
